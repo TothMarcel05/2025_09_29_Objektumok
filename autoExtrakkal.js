@@ -1,4 +1,5 @@
-import { Auto } from "./auto";
+import { Auto } from "./auto.js";
+
 export class AutoExtrakkal extends Auto {
 
     constructor(modell, evjarat, szin, fogyasztas, tankMeret)
@@ -7,6 +8,15 @@ export class AutoExtrakkal extends Auto {
         this._fogyasztas = fogyasztas
         this._tankMeret = tankMeret
     }
+
+    hatotav() {
+    return _tankMeret / _fogyasztas * 100}
+
+    ar() {
+    return _tankMeret * 600}
+
+
+
     get fogyasztas() {
         return this._fogyasztas
     }
@@ -21,4 +31,8 @@ export class AutoExtrakkal extends Auto {
     set tankMeret(tankMeretErtek){
         this._tankMeret = tankMeretErtek
     }
+
+    // hatótáv kiszámítása
+
 }
+
